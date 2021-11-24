@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSO DOWNLOAD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Global.css">
+</head>
+
+<body>
+    <header class="header-box">
+        <div class="hd-logo">
+            <img class="hd-img" src="./img/UD.png" alt="logo of website">
+            <h1 class="hd-title">UNIVERSO DOWNLOAD</h1>
+        </div>
+
+        <ul class="menu">
+            <li><a href="/filmes">Filmes</a></li>
+            <li><a href="/series">Séries</a></li>
+            <li><a href="/animes">Animes</a></li>
+            <li><a href="/termos-de-uso">Termos de Uso</a></li>
+            <li><a href="/ajuda">Ajuda</a></li>
+        </ul>
+        
+        <div class="search-box-icon">
+            <svg class="search-open" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+            <g><g><path d="M688.5,424.6c0-72.6-25.8-134.8-77.4-186.4s-113.8-77.4-186.4-77.4s-134.8,25.8-186.4,77.4S160.8,352,160.8,424.6c0,72.6,25.8,134.8,77.4,186.4c51.6,51.6,113.8,77.4,186.4,77.4S559.4,662.6,611,611C662.6,559.4,688.5,497.3,688.5,424.6L688.5,424.6z M990,914.6c0,20.4-7.5,38.1-22.4,53c-14.9,14.9-32.6,22.4-53,22.4c-21.2,0-38.9-7.5-53-22.4l-202-201.4c-70.3,48.7-148.6,73-235,73c-56.1,0-109.8-10.9-161.1-32.7s-95.4-51.2-132.5-88.3c-37.1-37.1-66.5-81.3-88.3-132.5C20.9,534.5,10,480.8,10,424.6s10.9-109.8,32.7-161.1S93.9,168.1,131,131c37.1-37.1,81.3-66.6,132.5-88.3S368.5,10,424.6,10s109.8,10.9,161.1,32.7c51.2,21.8,95.4,51.2,132.5,88.3c37.1,37.1,66.6,81.3,88.3,132.5c21.8,51.2,32.7,104.9,32.7,161.1c0,86.4-24.3,164.7-73,235l202,202C982.7,876.1,990,893.8,990,914.6L990,914.6z"/></g></g>
+            </svg>
+            <svg class="search-close search-hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                <g><path d="M585.8,500l385.9-385.9c24.5-24.5,24.5-61.3,0-85.8c-24.5-24.5-61.3-24.5-85.8,0L500,414.3L114.1,28.4c-24.5-24.5-61.2-24.5-85.8,0c-24.5,24.5-24.5,61.3,0,85.8L411.2,500L28.4,885.9c-24.5,24.5-24.5,61.3,0,85.8c9.2,12.3,27.6,18.4,42.9,18.4c15.3,0,30.6-6.1,42.9-18.4L500,585.8l385.9,385.9c12.3,12.3,27.6,18.4,42.9,18.4s30.6-6.1,42.9-18.4c24.5-24.5,24.5-61.3,0-85.8L585.8,500z"/></g>
+            </svg>
+        </div>
+
+        <div class="menu-mobile">
+            <hr class="m1">
+            <hr class="m2">
+            <hr class="m3">
+        </div>
+
+        <div class="search search-hidden">
+            <div class="search-box">
+                <input class="search-input" type="text" placeholder="Pesquisar" spellcheck="false" maxlength="55"/>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                    <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                    <g><g><path d="M688.5,424.6c0-72.6-25.8-134.8-77.4-186.4s-113.8-77.4-186.4-77.4s-134.8,25.8-186.4,77.4S160.8,352,160.8,424.6c0,72.6,25.8,134.8,77.4,186.4c51.6,51.6,113.8,77.4,186.4,77.4S559.4,662.6,611,611C662.6,559.4,688.5,497.3,688.5,424.6L688.5,424.6z M990,914.6c0,20.4-7.5,38.1-22.4,53c-14.9,14.9-32.6,22.4-53,22.4c-21.2,0-38.9-7.5-53-22.4l-202-201.4c-70.3,48.7-148.6,73-235,73c-56.1,0-109.8-10.9-161.1-32.7s-95.4-51.2-132.5-88.3c-37.1-37.1-66.5-81.3-88.3-132.5C20.9,534.5,10,480.8,10,424.6s10.9-109.8,32.7-161.1S93.9,168.1,131,131c37.1-37.1,81.3-66.6,132.5-88.3S368.5,10,424.6,10s109.8,10.9,161.1,32.7c51.2,21.8,95.4,51.2,132.5,88.3c37.1,37.1,66.6,81.3,88.3,132.5c21.8,51.2,32.7,104.9,32.7,161.1c0,86.4-24.3,164.7-73,235l202,202C982.7,876.1,990,893.8,990,914.6L990,914.6z"/></g></g>
+                </svg>
+            </div>
+            <div class="box-loading search-hidden">
+                <div class="search-loading"></div>
+            </div>
+            <ul class="search-results search-hidden"></ul>
+        </div>
+
+    </header>
+
+    <section class="modal-trailer" aria-hidden="true">
+        <div class="contain-trailer">
+            <div class="trailer-loading">
+                <div class="search-loading"></div>
+            </div>
+        </div>
+        <button class="modal-close" tabindex="2">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                <g><path d="M585.8,500l385.9-385.9c24.5-24.5,24.5-61.3,0-85.8c-24.5-24.5-61.3-24.5-85.8,0L500,414.3L114.1,28.4c-24.5-24.5-61.2-24.5-85.8,0c-24.5,24.5-24.5,61.3,0,85.8L411.2,500L28.4,885.9c-24.5,24.5-24.5,61.3,0,85.8c9.2,12.3,27.6,18.4,42.9,18.4c15.3,0,30.6-6.1,42.9-18.4L500,585.8l385.9,385.9c12.3,12.3,27.6,18.4,42.9,18.4s30.6-6.1,42.9-18.4c24.5-24.5,24.5-61.3,0-85.8L585.8,500z"/></g>
+            </svg>
+        </button>
+    </section>
+
+    <main>
+        <section class="hero-shadow-l"></section>
+        <section class="hero-shadow-b"></section> 
+        <section class="hero">
+            <div class="hero-contain">
+                <div class="hero-slide">
+                    <img class="bg-image" class="bg-image" src="" alt="">
+
+                    <aside class="hero-info">
+                        <div class="hero-meta">
+                            <li><a></a></li>
+                        </div>
+                        <div class="hero-overview">
+                            <h2 class="hero-title"></h2>
+                            <p class="movie-overview"></p>
+                        </div>
+
+                        <div class="hero-btns">
+                            <button class="btn-download">Baixar</button>
+                            <button class="btn-trailer">Trailer</button>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="hero-slide">
+                    <img class="bg-image" src="" alt="">
+
+                    <aside class="hero-info">
+                        <div class="hero-meta">
+                            <li><a></a></li>
+                        </div>
+                        <div class="hero-overview">
+                            <h2 class="hero-title"></h2>
+                            <p class="movie-overview"></p>
+                        </div>
+
+                        <div class="hero-btns">
+                            <div class="btn-download">Baixar</div>
+                            <div class="btn-trailer">Trailer</div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="hero-slide">
+                    <img class="bg-image" src="" alt="">
+
+                    <aside class="hero-info">
+                        <div class="hero-meta">
+                            <li><a></a></li>
+                        </div>
+                        <div class="hero-overview">
+                            <h2 class="hero-title"></h2>
+                            <p class="movie-overview"></p>
+                        </div>
+
+                        <div class="hero-btns">
+                            <div class="btn-download">Baixar</div>
+                            <div class="btn-trailer">Trailer</div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="hero-slide">
+                    <img class="bg-image" src="" alt="">
+
+                    <aside class="hero-info">
+                        <div class="hero-meta">
+                            <li><a></a></li>
+                        </div>
+                        <div class="hero-overview">
+                            <h2 class="hero-title"></h2>
+                            <p class="movie-overview"></p>
+                        </div>
+
+                        <div class="hero-btns">
+                            <div class="btn-download">Baixar</div>
+                            <div class="btn-trailer">Trailer</div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="hero-slide">
+                    <img class="bg-image" src="" alt="">
+
+                    <aside class="hero-info">
+                        <div class="hero-meta">
+                            <li><a></a></li>
+                        </div>
+                        <div class="hero-overview">
+                            <h2 class="hero-title"></h2>
+                            <p class="movie-overview"></p>
+                        </div>
+
+                        <div class="hero-btns">
+                            <div class="btn-download">Baixar</div>
+                            <div class="btn-trailer">Trailer</div>
+                        </div>
+                    </aside>
+                </div>
+                
+                <ul class="covers">
+                    <li class="cover-loading">
+                        <img src="" alt="">
+                    </li>
+                    <li class="cover-loading">
+                        <img src="" alt="">
+                    </li>
+                    <li class="cover-loading">
+                        <img src="" alt="">
+                    </li>
+                    <li class="cover-loading">
+                        <img src="" alt="">
+                    </li>
+                    <li class="cover-loading">
+                        <img src="" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="next-page">
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/></svg>
+            </div>
+        </section>
+
+        <div class="shadow"></div>
+        <div class="divi"></div>
+        
+        <section class="row-contain">
+            <div class="row-header">
+                <hr class="row-title-line" color="green"> 
+                <h3 class="row-title">NOVOS FILMES</h3>
+                <div class="row-more">VER MAIS</div>
+            </div>
+
+            <section class="row-overflow">
+                <div class="arrowMain">
+                    <svg class="rowL" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                    <svg class="rowR" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                </div>
+                <ul class="row"></ul>
+            </section>
+        </section>  
+
+        <section class="row-contain">
+            <div class="row-header">
+                <hr class="row-title-line" color="green">
+                <h3 class="row-title">SÉRIES POPULARES</h3>
+                <div class="row-more">VER MAIS</div>
+            </div>
+
+            
+            <section class="row-overflow">
+                <div class="arrowMain">
+                    <svg class="rowL" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                    <svg class="rowR" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                </div>
+                <ul class="row"></ul>
+            </section>
+
+        </section>
+
+        <section class="row-contain">
+
+            <div class="explorer">
+                <hr class="row-title-line" color="green">
+                <h3 class="row-title">EXPLORAR MAIS</h3>
+            </div>
+
+            <ul class="col-tag">
+                <li><a href="/acao">Acão</a></li>
+                <li><a href="/aventura">Aventura</a></li>
+                <li><a href="/terror">Terror</a></li>
+                <li><a href="/anima">Animacão</a></li>
+                <li><a href="/Comédia">Comédia</a></li>
+                <li><a href="/Documentário">Documentário</a></li>
+                <li><a href="/terror">Terror</a></li>
+                <li><a href="/anima">Animacão</a></li>
+                <li><a href="/Comédia">Comédia</a></li>
+                <li><a href="/Documentário">Documentário</a></li>
+                <li><a href="/terror">Terror</a></li>
+                <li><a href="/anima">Animacão</a></li>
+                <li><a href="/Comédia">Comédia</a></li>
+                <li><a href="/Documentário">Documentário</a></li>
+            </ul>
+
+        </section>
+
+        <section class="row-contain">
+
+            <div class="row-header">
+                <hr class="row-title-line" color="green">
+                <h3 class="row-title">DESENHOS</h3>
+                <div class="row-more">VER MAIS</div>
+            </div>
+
+            
+            <section class="row-overflow">
+                <div class="arrowMain">
+                    <svg class="rowL" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                    <svg class="rowR" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                </div>
+                <ul class="row"></ul>
+            </section>
+        </section>
+
+        <section class="row-contain">
+
+            <div class="row-header">
+                <hr class="row-title-line" color="green">
+                <h3 class="row-title">ANIMES</h3>
+                <div class="row-more">VER MAIS</div>
+            </div>
+
+            
+            <section class="row-overflow">
+                <div class="arrowMain">
+                    <svg class="rowL" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                    <svg class="rowR" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                </div>
+                <ul class="row"></ul>
+            </section>
+        </section>  
+
+        <section class="row-contain">
+
+            <div class="trl-title">
+                <hr class="row-title-line" color="green">
+                <h3 class="row-title">FILMES EM BREVE</h3>
+            </div>
+
+            <div class="trl-Col">
+                <div class="trailer-arrows">
+                    <svg class="eTrl" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                    <svg class="dTrl" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M10.354,12.646l-0.707,0.707L4.293,8l5.354-5.354  l0.707,0.707L5.707,8L10.354,12.646z"/></svg>
+                </div>
+
+                <div class="trailer-contain">
+                    <ul class="trailer-row">
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                        <li>
+                            <img class="" src="" alt="">
+                            <h3></h3>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="about">
+        <section class="about-menu">
+            <h4>MENU</h4>
+            <li><a href="http://filmes">Filmes</a></li>
+            <li><a href="http://series">Séries</a></li>
+            <li><a href="http://animes">Animes</a></li>
+
+        </section>
+        <section class="about-help">
+            <h4>SOBRE</h4>
+            <li><a href="http://">Termos de Uso</a></li>
+            <li><a href="http://">Ajuda</a></li>
+        </section>
+
+        <section class="about-credit"><span class="about-credit-p">UNIVERSO DOWNLOAD</span></section>
+    </footer>
+
+    <script defer type="application/javascript" src="app.js"></script>
+    <script defer type="application/javascript" src='Global.js'></script>
+</body>
+</html>
