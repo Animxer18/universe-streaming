@@ -6,6 +6,8 @@ const API = {
     LIST_IDS: [7110926, 7110927, 7110930, 7110929]
 }
 
+Object.freeze(API);
+
 function getTrailerExplorer(addYearFuture){
     const startParams = '&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'
     , endParams = '&vote_count.gte=0&vote_count.lte=0&vote_average.gte=0&vote_average.lte=0';
