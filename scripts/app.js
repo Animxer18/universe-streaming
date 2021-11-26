@@ -29,7 +29,9 @@ function createUrl(mode, id, trailer, language){
 async function request(mode, id, trailer, version = 4, language ='pt-BR'){
     const addOptions = createUrl(mode, id, trailer, language)
     , sortList = version === 4 ? '&sort_by=popularity.desc' : ''
-    , url = await fetch(`${API.API_URL}${version}/${addOptions}${sortList}`);
+    , append = '&append_to_response=';
+
+    const url = await fetch(`${API.API_URL}${version}/${addOptions}${sortList}`);
 
     return url.ok ? url.json() : console.log('Error');
 }

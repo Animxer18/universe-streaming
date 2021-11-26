@@ -1,22 +1,28 @@
 const API = {
     API_URL: 'https://api.themoviedb.org/',
     API_KEY: 'api_key=8575f881e26d32c0677395735bbe44b7',
-    LANGUAGE: '&language=',
     IMG_URL: 'https://image.tmdb.org/t/p/w'
 }
 
-function createUrl(mode, id, trailer, language){
+function createUrl(mode, id, trailer){
     const options = trailer ? '/videos' : ''
-        , extra = mode === 'discover' ? getTrailerExplorer(1) : '';
-    if (!language) language = 'en-US';
-    return `${mode}/${id}${options}?${API.API_KEY + API.LANGUAGE + language + extra}`;
+    , extra = mode === 'discover' ? getTrailerExplorer(1) : '';
+    return `${mode}/${id + options}?${API.API_KEY + extra}`;
 }
 
-async function request(mode, id, trailer, version = 4, language ='pt-BR'){
-    const addOptions = createUrl(mode, id, trailer, language)
-        , sortList = version === 4 ? '&sort_by=popularity.desc' : ''
-        , url = await fetch(`${API.API_URL}${version}/${addOptions}${sortList}`);
-    return url.ok ? url.json() : console.log('Error');
+async function request(mode, id, trailer, version = 4, types, language ='pt-BR'){
+    const typeUrl = createUrl(mode, id, trailer)
+    , sortList = version === 4 ? '&sort_by=popularity.desc' : ''
+    , lang = '&language=' + (language || 'en-US')
+    , append = `&append_to_response=${types}`
+    , url = `${API.API_URL + version}/${typeUrl + sortList + lang + append}`
+    
+    const data = await fetch(url);
+    if(data.ok){
+        return data.json();
+    }else{
+        console.log('Error')
+    }
 }
 
 function query(item){ 
@@ -84,13 +90,11 @@ function getDateRelease(date){
     return (date.release_date || date.first_air_date)
 }
 
-async function getCertification(id, media){
-    const rating = media === 'tv' ? '/content_ratings' : '/release_dates'
-        , dates = await request(media, id + rating , false, 3);
+function getRating(certific){
     let brRating;
-    dates.results.map(nation =>{
+    certific.results.map(nation =>{
         if(nation.iso_3166_1 === 'BR'){
-            brRating = nation.rating;
+            brRating = nation.rating || nation.release_dates[0].certification;
         }
     })
 
@@ -106,7 +110,14 @@ function setColorCert(certi, div) {
     })
 }
 
-function getDetails(ul, item, type){
+function getCertification(item, detail) {
+    const certification = (item.release_dates || item.content_ratings)
+    const rating = getRating(certification);
+    detail.innerHTML = rating || '';
+    setColorCert(rating, detail);
+}
+
+function getDetails(ul, item){
     console.log(item);
     ul.forEach(async (li, index) => {
         const detail = li.firstElementChild;
@@ -115,21 +126,13 @@ function getDetails(ul, item, type){
                 detail.innerHTML = item.vote_average;
                 break;
             case 1:
-                const certification = await getCertification(item.id, type);
-                detail.innerHTML = certification || '';
-                setColorCert(certification, detail);
+                getCertification(item, detail);
                 break;
             case 2:
                 detail.innerHTML = (item.runtime || item.episode_run_time[0]) + ' min';
                 break;
             case 3:
                 detail.innerHTML = getDateRelease(item).slice(0, 4);
-                break;
-            case 4:
-                detail.innerHTML = item.number_of_seasons;
-                break;
-            case 5:
-                detail.innerHTML = item.networks[0].name
                 break;
             default:
                 detail.innerHTML = 'Indisponível';
@@ -167,11 +170,12 @@ function setHeader(item, type){
         , key = () =>  keys[Math.floor(Math.random() * keys.length)]
     request('list', key()).then((list) => {
         const random = Math.floor(Math.random() * 18)
-            , item = list.results[random];
+            , item = list.results[random]
+            , append = 'videos,release_dates,content_ratings'
 
-        request(item.media_type, item.id, false, 3).then((content) => {
+        request(item.media_type, item.id, false, 3, append).then((content) => {
             setBannerImage(content);
-            setHeader(content, item.media_type);
+            setHeader(content);
         })
     })
 })()
