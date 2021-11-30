@@ -1,6 +1,7 @@
 function query(select){
         return document.querySelector(select)
 }
+
 (function (){
         const dropDown = query('.next-page');
         dropDown.addEventListener('click', () => {
@@ -14,7 +15,7 @@ function toggleClass(bool, elem, setClass){
 }
     
 (function setColorHeader(size, classSelect) {
-        document.addEventListener('scroll', () =>{
+        document.addEventListener('scroll', () => {
                 toggleClass(window.scrollY > size, query('header', false), classSelect);
         });
 })(200, 'header-select');
